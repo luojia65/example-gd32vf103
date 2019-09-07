@@ -19,8 +19,9 @@ fn main() -> ! {
     // pa2.set_high().unwrap();
     dp.RCU.apb2en.write(|w| w.paen().set_bit());
     dp.GPIOA.ctl0.write(|w| unsafe {
-        w.ctl0().bits(0b01).md0().bits(0b11)
+        w.ctl1().bits(0b00).md1().bits(0b11)
     });
-    dp.GPIOA.bc.write(|w| w.cr0().set_bit());
+    // dp.GPIOA.bc.write(|w| w.cr1().set_bit());
+    dp.GPIOA.bop.write(|w| w.bop1().set_bit());
     loop {}
 }
