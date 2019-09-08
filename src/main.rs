@@ -6,9 +6,11 @@ extern crate panic_halt;
 use riscv_rt::entry;
 
 // use gd32vf103_hal::prelude::*;
-use gd32vf103_hal::pac as pac;
+// use gd32vf103_hal::pac as pac;
 // use gd32vf103_hal::gpio::UpTo50MHz;
 // use embedded_hal::digital::v2::OutputPin;
+use gd32vf103_pac as pac;
+
 #[entry]
 fn main() -> ! {
     let dp = pac::Peripherals::take().unwrap();
@@ -20,8 +22,13 @@ fn main() -> ! {
     dp.RCU.apb2en.write(|w| w.paen().set_bit());
     dp.GPIOA.ctl0.write(|w| unsafe {
         w.ctl1().bits(0b00).md1().bits(0b11)
+        .ctl2().bits(0b00).md2().bits(0b11)
     });
-    // dp.GPIOA.bc.write(|w| w.cr1().set_bit());
+    // 1
     dp.GPIOA.bop.write(|w| w.bop1().set_bit());
-    loop {}
+    // 2
+    dp.GPIOA.bc.write(|w| w.cr2().set_bit());
+    loop {
+        unsafe { riscv::asm::wfi() };
+    }
 }

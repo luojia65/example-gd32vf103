@@ -27,18 +27,10 @@ name = "example-gd32vf103"
 version = "0.1.0"
 dependencies = [
  "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "gd32vf103-hal 0.0.0",
- "panic-halt 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "riscv-rt 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "gd32vf103-hal"
-version = "0.0.0"
-dependencies = [
- "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "gd32vf103-pac 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "nb 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "panic-halt 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "riscv 0.5.4 (registry+https://github.com/rust-lang/crates.io-index)",
+ "riscv-rt 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
