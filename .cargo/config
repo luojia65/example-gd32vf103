@@ -3,6 +3,7 @@ rustflags = [
   "-C", "link-arg=-Tmemory.x",
   "-C", "link-arg=-Tlink.x",
 ]
+runner = "riscv-none-embed-gdb -q -x openocd.gdb"
 
 [build]
 target = "riscv32imac-unknown-none-elf"
