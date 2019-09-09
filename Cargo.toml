@@ -13,9 +13,9 @@ panic-halt = "*"
 embedded-hal = "*"
 gd32vf103-pac = "*"
 
-# [dependencies.gd32vf103-hal]
-# version = "*"
-# path = "../gd32vf103-hal"
+[dependencies.gd32vf103-hal]
+version = "*"
+path = "../gd32vf103-hal"
 
 # this lets you use `cargo fix`!
 [[bin]]
