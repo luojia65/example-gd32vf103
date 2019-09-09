@@ -7,7 +7,6 @@ use riscv_rt::entry;
 use gd32vf103_hal as hal;
 use hal::prelude::*;
 use gd32vf103_hal::pac as pac;
-use embedded_hal::digital::v2::*;
 
 #[entry]
 fn main() -> ! {
