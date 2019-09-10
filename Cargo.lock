@@ -26,17 +26,15 @@ dependencies = [
 name = "example-gd32vf103"
 version = "0.1.0"
 dependencies = [
- "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
- "gd32vf103-hal 0.0.0",
- "gd32vf103-pac 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "gd32vf103-hal 0.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "panic-halt 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "riscv 0.5.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "riscv-rt 0.6.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "gd32vf103-hal"
 version = "0.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "gd32vf103-pac 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -185,6 +183,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum bare-metal 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)" = "5deb64efa5bd81e31fcd1938615a6d98c82eafcbcd787162b6f63b91d6bac5b3"
 "checksum bit_field 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)" = "ed8765909f9009617974ab6b7d332625b320b33c326b1e9321382ef1999b5d56"
 "checksum embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "ee4908a155094da7723c2d60d617b820061e3b4efcc3d9e293d206a5a76c170b"
+"checksum gd32vf103-hal 0.0.0 (registry+https://github.com/rust-lang/crates.io-index)" = "a3cc4a58ce721795e313fd3f4165139b2234d3986d8b2c6524b16cbc7c08ac58"
 "checksum gd32vf103-pac 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "b95b21fa6efaedb0b7996dd87ee798d4dc15530d32dca162a4548a6577b17fed"
 "checksum nb 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "b1411551beb3c11dedfb0a90a0fa256b47d28b9ec2cdff34c25a2fa59e45dbdc"
 "checksum panic-halt 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "de96540e0ebde571dc55c73d60ef407c653844e6f9a1e2fdbd40c07b9252d812"

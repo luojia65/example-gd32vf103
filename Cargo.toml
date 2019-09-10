@@ -7,15 +7,9 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-riscv = "*"
-riscv-rt = "*"
-panic-halt = "*"
-embedded-hal = "*"
-gd32vf103-pac = "*"
-
-[dependencies.gd32vf103-hal]
-version = "*"
-path = "../gd32vf103-hal"
+riscv-rt = "0.6"
+panic-halt = "0.2"
+gd32vf103-hal = "0.0"
 
 # this lets you use `cargo fix`!
 [[bin]]
