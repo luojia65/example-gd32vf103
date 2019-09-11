@@ -15,7 +15,7 @@ fn main() -> ! {
     let mut gpioa = dp.GPIOA.split(&mut rcu.apb2);
     let mut pa1 = gpioa.pa1.into_push_pull_output(&mut gpioa.ctl0)
         .lock(&mut gpioa.lock);
-    gpioa.lock.lock_all_pins();
+    gpioa.lock.freeze();
     unsafe {
         let lock = 0x40010818 as *mut u32;
         *lock = 0b00000000_00000001_00000000_00000110;
