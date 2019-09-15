@@ -9,5 +9,7 @@ set backtrace limit 32
 
 load
 
+break _start
+
 # start the process but immediately halt the processor
 stepi
