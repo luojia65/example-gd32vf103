@@ -9,7 +9,8 @@ edition = "2018"
 [dependencies]
 riscv-rt = "0.6"
 panic-halt = "0.2"
-gd32vf103-hal = {path = "../gd32vf103-hal", version = "0.0"}
+# gd32vf103-hal = {path = "../gd32vf103-hal", version = "0.0"}
+gd32vf103-hal = "*"
 
 # this lets you use `cargo fix`!
 [[bin]]
